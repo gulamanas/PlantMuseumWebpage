@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plant Museum</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alatsi&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/6edc3acce4.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav class="navigation">
+      <div class="logo">
+        <h1><i class="fab fa-pagelines"></i>Seplaman</h1>
+      </div>
+      <ul class="r-nav">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#slider">Slider</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+    <div class="home" id="home">
+      <div class="lefthome">
+        <h1>Beautiful Plants in</h1>
+        <h2>your garden</h2>
+        <button>Click Here</button>
+      </div>
+      <div class="righthome">
+        <img src="images/undraw_Country_side_k696.svg" alt="" />
+      </div>
+    </div>
+    <div class="slider" id="slider">
+      <h1>Image Slider</h1>
+      <div class="carousel__container">
+        <i class="fas fa-arrow-left" id="prevBtn"></i>
+        <i class="fas fa-arrow-right" id="nextBtn"></i>
+        <div class="carousel__slide">
+          <img src="./images/slider (4).jpg" id="lastClone" alt="" />
+          <img src="./images/slider (1).jpg" alt="" />
+          <img src="./images/slider (2).jpg" alt="" />
+          <img src="./images/slider (3).jpg" alt="" />
+          <img src="./images/slider (4).jpg" alt="" />
+          <img src="./images/slider (1).jpg" id="firstClone" alt="" />
+        </div>
+      </div>
+    </div>
+    <div class="gallery" id="gallery">
+      <h1>Gallery</h1>
+      <div class="gallery__container">
+        <ul class="gallery__list">
+          <li class="gallery__item">
+            <img src="images/gallery (1).jpg" alt="" onclick="showImg(this)">
+          </li>
+          <li class="gallery__item">
+            <img src="images/gallery (2).jpg" onclick="showImg(this)" alt="">
+          </li>
+          <li class="gallery__item">
+            <img src="images/gallery (3).jpg" onclick="showImg(this)" alt="">
+          </li>
+          <li class="gallery__item">
+            <img src="images/gallery (4).jpg" onclick="showImg(this)" alt="">
+          </li>
+          <li class="gallery__item">
+            <img src="images/gallery (5).jpg" onclick="showImg(this)" alt="">
+          </li>
+          <li class="gallery__item">
+            <img src="images/gallery (6).jpg" onclick="showImg(this)" alt="">
+          </li>
+          <li class="gallery__item">
+            <img src="images/gallery (7).jpg" onclick="showImg(this)" alt="">
+          </li>
+          <li class="gallery__item">
+            <img src="images/gallery (8).jpg" onclick="showImg(this)" alt="">
+          </li>
+          <li class="gallery__item">
+            <img src="images/gallery (9).jpg" onclick="showImg(this)" alt="">
+          </li>
+        </ul>
+        <img class="gallery__box"></img>
+      </div>
+    </div>
+    <div class="about" id="about">
+      <h1>About Us</h1>
+      <div class="public__portfolio">
+        <div class="public">
+          <img src="images/people (1).jpg" alt="">
+          <h2>Mrs. Charlotte</h2>
+        </div>
+        <div class="public">
+          <img src="images/people (2).jpg" alt="">
+          <h2>Miss Juliet</h2>
+        </div>
+        <div class="public">
+          <img src="images/people (3).jpg" alt="">
+          <h2>Mr. John</h2>
+        </div>
+        <div class="public">
+          <img src="images/people (4).jpg" alt="">
+          <h2>Mr. Peter</h2>
+        </div>
+      </div>
+      <div class="rights">
+        <hr>
+        <h2>&copy Seplaman pvt ltd. All rights reserved.</h2>
+        <div class="social__media">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <script src="./scripts.js"></script>
+    <!-- background-color:#63FF86 -->
+    <!-- For Gradient background: linear-gradient (to bottom, #63FF86, #03DA3F) -->
+  </body>
+</html>
