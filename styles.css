@@ -27,7 +27,7 @@ body {
 
 .logo h1 {
   font-size: 30px;
-  color: rgba(0, 0, 0, 0.644);;
+  color: rgba(0, 0, 0, 0.644);
   text-transform: uppercase;
   letter-spacing: 5px;
   font-weight: bold;
@@ -41,7 +41,6 @@ body {
 .r-nav {
   display: flex;
   justify-content: space-around;
-  width: 40%;
 }
 
 .r-nav li {
@@ -55,13 +54,14 @@ body {
   font-weight: bold;
   letter-spacing: 3px;
   transition: all 0.2s ease-in-out;
+  padding: 10px 20px;
 }
 
 .r-nav li a:hover {
   background-image: linear-gradient(to top, #350de7, #21eef5);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  padding: 10px 0px;
+  transition: all 0.2s ease-in-out;
 }
 
 .burger {
@@ -221,56 +221,18 @@ body {
   width: 100%;
   height: 100vh;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   flex-direction: column;
 }
 
-.slider h1 {
-  margin-top: 14vh;
-  text-transform: uppercase;
-  text-decoration: underline;
+.swiper-container {
+  width: 600px;
 }
 
-.carousel__container {
-  width: 45%;
-  margin: auto;
-  overflow: hidden;
-  position: relative;
-  -webkit-box-shadow: 6px 6px 5px 0px rgba(99,99,99,1);
--moz-box-shadow: 6px 6px 5px 0px rgba(99,99,99,1);
-box-shadow: 6px 6px 5px 0px rgba(99,99,99,1);
-}
-
-.carousel__slide {
-  width: 100%;
-  display: flex;
-  height: 400px;  
-}
-
-.carousel__slide img {
-  width: 100%;
+.swiper-slide img {
+  width: 600px;
   height: 400px;
-}
-
-#prevBtn {
-  position: absolute;
-  top: 50%;
-  z-index: 10;
-  left: 5%;
-  font-size: 30px;
-  color: rgb(168, 66, 6);
-  cursor: pointer;
-}
-
-#nextBtn {
-  position: absolute;
-  top: 50%;
-  z-index: 10;
-  right: 5%;
-  font-size: 30px;
-  color: rgb(168, 66, 6);
-  cursor: pointer;
 }
 
 /* Slider styling ends here */
@@ -319,18 +281,14 @@ box-shadow: 6px 6px 5px 0px rgba(99,99,99,1);
   border: none;
   margin-top: 8vh;
   margin-right: 5vw;
-  -webkit-box-shadow: 6px 6px 5px 0px rgba(176, 176, 176, 1);
-  -moz-box-shadow: 6px 6px 5px 0px rgba(176, 176, 176, 1);
-  box-shadow: 6px 6px 5px 0px rgba(176, 176, 176, 1);
+  box-shadow: 6px 6px 5px 0px rgba(176, 176, 176, 1), -6px -6px 5px rgb(231, 231, 231);
 }
 
 .gallery__list img {
   width: 150px;
   height: 100%;
   transition: transform 0.4s ease-in-out;
-  -webkit-box-shadow: 6px 6px 5px 0px rgba(176, 176, 176, 1);
-  -moz-box-shadow: 6px 6px 5px 0px rgba(176, 176, 176, 1);
-  box-shadow: 6px 6px 5px 0px rgba(176, 176, 176, 1);
+  box-shadow: 6px 6px 5px #a2a2a2, -6px -6px 5px rgb(231, 231, 231);
 }
 
 .gallery__list img:hover {
@@ -352,35 +310,106 @@ box-shadow: 6px 6px 5px 0px rgba(99,99,99,1);
 }
 
 .about h1 {
-  margin-bottom: 15vh;
-  text-decoration: underline;
+  text-align: center;
+  margin-top: 12vh;
   text-transform: uppercase;
-  margin-top: 10vh;
+  text-decoration: underline;
 }
 
 .public__portfolio {
+  width: 100%;
   display: flex;
   justify-content: space-evenly;
-  width: 100%;
-  margin-top: -20vh;
+}
+
+/* card designs */
+
+.public {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  margin-top: 10vh;
+  border-radius: 20px;
+  box-shadow: 8px 8px 12px #a2a2a2, -8px -8px 12px rgb(231, 231, 231);
 }
 
 .public img {
-  width: 250px;
-  -webkit-box-shadow: 6px 6px 5px 0px rgba(176, 176, 176, 1);
-  -moz-box-shadow: 6px 6px 5px 0px rgba(176, 176, 176, 1);
-  box-shadow: 6px 6px 5px 0px rgba(176, 176, 176, 1);
-  transition: transform 0.3s ease-in-out;
-  cursor: pointer;
-}
-
-.public img:hover {
-  transform: scale(1.05);
+  width: 150px;
+  border-radius: 50%;
 }
 
 .public h2 {
-  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: rgb(122, 121, 121);
 }
+
+.public h3 {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: rgb(122, 121, 121);
+}
+
+.public .fab {
+  font-size: 1.6rem;
+  padding: 8px;
+}
+
+.fa-dribbble {
+  color: rgb(252, 133, 172);
+}
+
+.fa-facebook {
+  color: #4267b2;
+}
+
+.fa-instagram {
+  background: linear-gradient(
+    45deg,
+    rgba(252, 203, 99, 1) 0%,
+    rgba(251, 174, 80, 1) 14%,
+    rgba(233, 91, 80, 1) 39%,
+    rgba(188, 42, 142, 1) 57%,
+    rgba(76, 104, 215, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.fa-twitter {
+  color: #1da1f2;
+}
+
+.fa-linkedin {
+  color: #0077b5;
+}
+
+.fa-youtube {
+  color: #ff0000;
+}
+
+.btn {
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  margin-top: 10px;
+  padding: 10px 20px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  background-color: rgb(255, 77, 136);
+  box-shadow: 3px 3px 6px rgb(126, 126, 126), -4px -4px 6px rgb(243, 188, 206);
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: rgb(255, 61, 126);
+  cursor: pointer;
+}
+
+/* card design end here */
 
 .rights {
   display: flex;
@@ -391,16 +420,13 @@ box-shadow: 6px 6px 5px 0px rgba(99,99,99,1);
 }
 
 .rights hr {
-  width: 300%;
+  width: 80%;
   background-color: black;
 }
 
 .social__media a {
   font-size: 2rem;
   padding: 0px 5px;
-  background-image: linear-gradient(to top, #03da3f 30%, #63ff86 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   outline: none;
   text-decoration: none;
 }
