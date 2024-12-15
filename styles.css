@@ -9,6 +9,7 @@
 
 body {
   margin: 0px;
+  background: #e4e4e4;
 }
 
 /* Navigation starts here */
@@ -98,7 +99,8 @@ body {
     align-items: center;
     width: 50%;
     transform: translateX(100%);
-    transition: transform 0.5s ease-in;
+    transition: transform 0.3s ease-in;
+    overflow-x: hidden;
   }
 
   .burger {
@@ -129,12 +131,8 @@ body {
   width: 100%;
   height: 100vh;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-}
-
-.lefthome {
-  margin-left: 10vw;
 }
 
 .lefthome h1 {
@@ -178,9 +176,12 @@ body {
   transform: rotateY(180deg);
   cursor: pointer;
 }
+.righthome {
+  width: 50%;
+}
 
 .righthome img {
-  width: 70%;
+  width: 100%;
   transition: all 0.3s ease-in-out;
 }
 
@@ -189,9 +190,9 @@ body {
   margin-bottom: 30px;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
   .lefthome h1 {
-    font-size: 2.5rem;
+    font-size: 2.6rem;
   }
 
   .lefthome h2 {
@@ -203,13 +204,12 @@ body {
   }
 }
 
-@media screen and (max-width: 498px) {
-  .lefthome h1 {
-    font-size: 2rem;
-  }
-
-  .lefthome h2 {
-    font-size: 1.5rem;
+@media screen and (max-width: 600px) {
+  .home {
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
   }
 }
 
@@ -281,7 +281,8 @@ body {
   border: none;
   margin-top: 8vh;
   margin-right: 5vw;
-  box-shadow: 6px 6px 5px 0px rgba(176, 176, 176, 1), -6px -6px 5px rgb(231, 231, 231);
+  box-shadow: 6px 6px 5px 0px rgba(176, 176, 176, 1),
+    -6px -6px 5px rgb(231, 231, 231);
 }
 
 .gallery__list img {
@@ -332,7 +333,8 @@ body {
   padding: 40px;
   margin-top: 10vh;
   border-radius: 20px;
-  box-shadow: 8px 8px 12px #a2a2a2, -8px -8px 12px rgb(231, 231, 231);
+  box-shadow: 8px 8px 12px #00000031, -8px -8px 12px rgba(255, 255, 255, 0.8);
+  cursor: pointer;
 }
 
 .public img {

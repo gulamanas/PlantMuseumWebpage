@@ -4,10 +4,8 @@ const navSlide = () => {
   const burger = document.querySelector(".burger");
   const nav = document.querySelector(".r-nav");
   burger.addEventListener("click", () => {
-    //Toggle Nav
     nav.classList.toggle("nav-active");
 
-    //Burger Animation
     burger.classList.toggle("toggle");
   });
 };
@@ -53,11 +51,11 @@ $(".r-nav a").on("click", function (e) {
   if (this.hash !== "") {
     e.preventDefault();
 
-    const something = this.hash;
+    const smoothScroll = this.hash;
 
     $("html , body").animate(
       {
-        scrollTop: $(something).offset().top,
+        scrollTop: $(smoothScroll).offset().top,
       },
       800
     );
